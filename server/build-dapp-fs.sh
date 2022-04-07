@@ -15,7 +15,7 @@ DAPP_FS=/opt/cartesi/paper-scissors-stone-dapp-fs/paper-scissors-stone-dapp
 DAPP_FS_BIN=/opt/cartesi/paper-scissors-stone-dapp-fs/paper-scissors-stone-dapp.ext2
 
 mkdir -p $DAPP_FS
-cp ./paper-scissors-stone.py $DAPP_FS
+cp ./paper-scissors-stone $DAPP_FS
 cp ./run.sh $DAPP_FS
-genext2fs -f -i 512 -b 1024 -d $DAPP_FS $DAPP_FS_BIN
+genext2fs -f -i 512 -b 32768 -d $DAPP_FS $DAPP_FS_BIN
 truncate -s %4096 $DAPP_FS_BIN

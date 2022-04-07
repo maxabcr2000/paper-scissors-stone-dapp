@@ -23,7 +23,7 @@ cd /mnt/paper-scissors-stone-dapp
 # Start paper-scissors-stone dapp
 echo -n "Starting paper-scissors-stone-dapp: "
 HTTP_DISPATCHER_URL="http://127.0.0.1:$HTTP_DISPATCHER_PORT" \
-gunicorn --preload --workers 1 --bind 127.0.0.1:$DAPP_PORT paper-scissors-stone:app &
+./paper-scissors-stone mono -d $DAPP_PORT -h $HTTP_DISPATCHER_URL
 
 # Wait for the paper-scissors-stone dapp to start up
 RETRY=0
