@@ -20,5 +20,7 @@ cartesi-machine \
     --flash-drive=label:root,filename:rootfs.ext2 \
     --ram-image=linux-5.5.19-ctsi-3.bin \
     --rom-image=rom.bin \
+    --max-mcycle=0 \
+    --final-hash \
     --store=$MACHINE_DIR \
     -- "/mnt/paper-scissors-stone-dapp/run.sh"
