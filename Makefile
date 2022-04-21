@@ -25,10 +25,10 @@ clean:
 	@make -C server clean
 	@rm -rf $(MACHINE_DIR)
 
-run-in-prod-mode:
+prod-mode:
 	docker-compose up --build
 
-run-in-host-mode:
+host-mode:
 	docker-compose -f docker-compose.yml -f docker-compose-host.yml up --build
 
 shutdown:
